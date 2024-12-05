@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard"
 import { fetchApi } from "../lib/fetchApi"
 
 export default function Showcase() {
-    const { data } = fetchApi("https://fakestoreapi.com/products");
+    const { data, loading } = fetchApi("https://fakestoreapi.com/products");
 
     const [searchTerm, setSearchTerm] = useState("")
 
@@ -24,6 +24,15 @@ export default function Showcase() {
                     return <ProductCard key={product.id} id={product.id} title={product.title} category={product.category} image={product.image} price={product.price} />
                 })}
             </div>
+            {!loading && (
+                <div className="container grid grid-cols-5 gap-5">
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                </div>
+            )}
         </div>
     )
 }

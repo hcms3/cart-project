@@ -2,7 +2,7 @@ import { fetchApi } from "../lib/fetchApi";
 import ProductCard from "./ProductCard";
 
 export default function HomeSectionProducts(){
-    const {data} = fetchApi("https://fakestoreapi.com/products");
+    const {data, loading} = fetchApi("https://fakestoreapi.com/products");
     console.log(data)
     return(
         <section className="w-full grid grid-cols-4 gap-5">
@@ -11,6 +11,14 @@ export default function HomeSectionProducts(){
                     <ProductCard key={product.id} id={product.id} title={product.title} category={product.category} image={product.image} price={product.price} />
                 )
             })}
+            {!loading && (
+                <div className="grid grid-cols-4 col-span-4 gap-5">
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                    <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
+                </div>
+            )}
         </section>
     )
 }
