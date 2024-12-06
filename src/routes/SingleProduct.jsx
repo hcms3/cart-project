@@ -25,7 +25,7 @@ export default function SingleProduct() {
                         <h5 className="text-lg text-zinc-700 font-thin">{description}</h5>
                         <h2 className="text-3xl font-bold text-green-600">R$ {price}</h2>
                     </div>
-                    <AddToCartButton />
+                    <AddToCartButton product={data} />
                 </div>
             </div>
             <div className="container max-w-6xl py-5">
