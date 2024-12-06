@@ -7,7 +7,7 @@ export default function HomeSectionProducts(){
         <section className="w-full grid grid-cols-4 gap-5">
             {data.slice(0,4).map(product => {
                 return(
-                    <ProductCard key={product.id} id={product.id} title={product.title} category={product.category} image={product.image} price={product.price} />
+                    <ProductCard key={product.id} product={product} />
                 )
             })}
             {!loading && (

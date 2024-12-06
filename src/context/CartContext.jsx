@@ -10,5 +10,11 @@ export default function CartProvider({ children }) {
         setCartItems([...cartItems, product])
     }
 
-    return <CartContext.Provider value={{cartItems, addToCart}} >{children}</CartContext.Provider>
+    const removeItem = (product) => {
+        const newArray = cartItems.filter(item => item.id !== product.id);
+        console.log(product)
+        setCartItems(newArray)
+    }
+
+    return <CartContext.Provider value={{cartItems, addToCart, removeItem}} >{children}</CartContext.Provider>
 }

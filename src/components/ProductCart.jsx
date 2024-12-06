@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CartRemoverButton from "./CartRemoverButton";
 
 export default function ProductCart({ product }) {
     const [quantity, setQuantity] = useState(1);
@@ -13,7 +14,7 @@ export default function ProductCart({ product }) {
     return (
         <div className="w-full flex justify-between bg-zinc-100">
             <div className="flex w-full">
-                <img src={product.image} alt={product.title} className="w-full max-w-20 h-20" />
+                <img src={product.image} alt={product.title} className="w-full max-w-20 min-h-20 object-cover" />
                 <div className="py-1 px-3 flex flex-col gap-1">
                     <h2>{product.title}</h2>
                     <div className="text-zinc-500 text-xs flex items-center gap-5">
@@ -35,11 +36,7 @@ export default function ProductCart({ product }) {
                     <h2>Total: R$ {product.price * quantity}</h2>
                 </div>
             </div>
-            <button className="text-zinc-800 px-3">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </button>
+            <CartRemoverButton product={product} />
         </div>
     )
 }

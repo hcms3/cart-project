@@ -21,7 +21,7 @@ export default function Showcase() {
                         return term
                     }
                 }).map(product => {
-                    return <ProductCard key={product.id} id={product.id} title={product.title} category={product.category} image={product.image} price={product.price} />
+                    return <ProductCard key={product.id} product={product} />
                 })}
             </div>
             {!loading && (
