@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AddToCartButton from "./AddToCartButton";
 
 export default function ProductCard({ id, title, price, image, category }) {
     return (
@@ -16,7 +17,8 @@ export default function ProductCard({ id, title, price, image, category }) {
                     </Link>
                 )}
                 <p className="text-2xl text-green-800">R$ {price.toFixed(2)}</p>
-                <button className="text-zinc-50 bg-green-600 py-2">Adicionar ao carrinho</button>
+                {/* <button className="text-zinc-50 bg-green-600 py-2">Adicionar ao carrinho</button> */}
+                <AddToCartButton />
             </div>
         </div>
     )

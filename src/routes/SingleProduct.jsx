@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { fetchApi } from "../lib/fetchApi"
 import HomeSectionProducts from "../components/HomeSectionProducts";
+import AddToCartButton from "../components/AddToCartButton";
 
 export default function SingleProduct() {
 
@@ -24,7 +25,7 @@ export default function SingleProduct() {
                         <h5 className="text-lg text-zinc-700 font-thin">{description}</h5>
                         <h2 className="text-3xl font-bold text-green-600">R$ {price}</h2>
                     </div>
-                    <button className="w-full bg-green-500 text-zinc-50 py-3">Adicionar ao carrinho</button>
+                    <AddToCartButton />
                 </div>
             </div>
             <div className="container max-w-6xl py-5">

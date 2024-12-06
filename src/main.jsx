@@ -6,21 +6,24 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Showcase from './routes/Showcase.jsx'
 import SingleProduct from './routes/SingleProduct.jsx'
+import CartProvider from './context/CartContext.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      {path: "/", element: <Home />},
-      {path: "/showcase", element: <Showcase />},
-      {path: "/showcase/:id", element: <SingleProduct />},
+      { path: "/", element: <Home /> },
+      { path: "/showcase", element: <Showcase /> },
+      { path: "/showcase/:id", element: <SingleProduct /> },
     ]
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
 )

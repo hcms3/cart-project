@@ -1,4 +1,10 @@
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
+
 export default function ProductCart() {
+    const {cartItems} = useContext(CartContext)
+
+    console.log(cartItems)
     return (
         <div className="w-full flex justify-between bg-zinc-100">
             <div className="flex w-full">
