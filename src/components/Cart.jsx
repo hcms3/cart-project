@@ -8,7 +8,7 @@ export default function Cart({ position, closeCart }) {
     const { cartItems } = useContext(CartContext)
 
     return (
-        <div className="fixed top-0 right-0 w-full h-screen max-w-md bg-zinc-700 duration-300 flex flex-col" style={{
+        <div className="fixed top-0 right-0 w-full h-screen max-w-md bg-zinc-700 duration-300 flex flex-col z-10" style={{
             transform: `translateX(${position})`
         }}>
             <button className="text-zinc-50 w-full flex items-center py-2 px-5 gap-5 bg-emerald-600" onClick={closeCart}>
@@ -32,7 +32,7 @@ export default function Cart({ position, closeCart }) {
                     })
                 )}
             </div>
-            <Link to={"/"} className="py-3 px-5 text-3xl font-bold text-zinc-50 text-center bg-green-500">Finalizar compra</Link>
+            {cartItems.length > 0 && <Link to={"/cartpage"} className="py-3 px-5 text-3xl font-bold text-zinc-50 text-center bg-green-500">Finalizar compra</Link>}
         </div>
     )
 }

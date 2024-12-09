@@ -7,6 +7,7 @@ import Home from './routes/Home.jsx'
 import Showcase from './routes/Showcase.jsx'
 import SingleProduct from './routes/SingleProduct.jsx'
 import CartProvider from './context/CartContext.jsx'
+import CartPage from './routes/CartPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/showcase", element: <Showcase /> },
       { path: "/showcase/:id", element: <SingleProduct /> },
+      { path: "/cartpage", element: <CartPage /> },
     ]
   }
 ])
