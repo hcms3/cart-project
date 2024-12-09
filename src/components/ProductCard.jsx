@@ -3,7 +3,7 @@ import AddToCartButton from "./AddToCartButton";
 
 export default function ProductCard({ product }) {
     return (
-        <div className="w-full shadow-lg">
+        <div className="w-full shadow-lg max-w-96">
             <img src={product.image} alt="" className="w-full h-72 object-contain p-3" />
             <div className="pb-1 px-2 flex flex-col gap-3">
                 {product.title.length >= 35 && (

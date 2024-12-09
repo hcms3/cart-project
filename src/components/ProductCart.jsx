@@ -30,7 +30,7 @@ export default function ProductCart({ product }) {
                             </button>
                         </div>
                     </div>
-                    <h2>Total: R$ {totalSingleProduct.toFixed(2)}</h2>
+                    <h2 className="text-sm text-zinc-700">Total: R$ {totalSingleProduct.toFixed(2)}</h2>
                 </div>
             </div>
             <CartRemoverButton product={product} />

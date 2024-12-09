@@ -12,7 +12,7 @@ export default function Showcase() {
             <div className="container flex justify-end py-5">
                 <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type="text" className="border border-zinc-300 w-full max-w-lg py-1 px-2 rounded-sm text-zinc-800 outline-none" />
             </div>
-            <div className="container grid grid-cols-5 gap-5">
+            <div className="container w-full flex flex-col items-center sm:grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
                 {data.filter(term => {
                     if (searchTerm == "") {
                         return term
