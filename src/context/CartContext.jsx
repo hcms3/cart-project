@@ -41,13 +41,19 @@ export default function CartProvider({ children }) {
   };
 
   const reduceQuantity = (product) => {
-    setCartItems(
+    const getItem = cartItems.find((cartItem) => cartItem.id === product.id);
+
+    if (getItem.quantity === 1) {
+      setCartItems(cartItems.filter((cartItem) => cartItem.id !== product.id));
+    } else {
+      setCartItems(
         cartItems.map((cartItem) =>
           cartItem.id === product.id
             ? { ...cartItem, quantity: cartItem.quantity - 1 }
             : cartItem
         )
       );
+    }
   };
 
   return (
