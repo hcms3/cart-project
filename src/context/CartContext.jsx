@@ -30,8 +30,36 @@ export default function CartProvider({ children }) {
     setCartItems(newArray);
   };
 
+  const incrementQuantity = (product) => {
+    setCartItems(
+      cartItems.map((cartItem) =>
+        cartItem.id === product.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      )
+    );
+  };
+
+  const reduceQuantity = (product) => {
+    setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === product.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        )
+      );
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeItem }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeItem,
+        incrementQuantity,
+        reduceQuantity,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

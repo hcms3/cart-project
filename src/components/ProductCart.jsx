@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import CartRemoverButton from "./CartRemoverButton";
+import { CartContext } from "../context/CartContext";
 
 export default function ProductCart({ product }) {
 
-    var totalSingleProduct = product.price * product.quantity
+    var totalSingleProduct = product.price * product.quantity;
+
+    const {incrementQuantity, reduceQuantity} = useContext(CartContext)
 
     return (
         <div className="w-full flex justify-between bg-zinc-100">
@@ -13,13 +17,13 @@ export default function ProductCart({ product }) {
                     <div className="text-zinc-500 text-xs flex items-center gap-5">
                         <p>Preço p/u: R$ {product.price}</p>
                         <div className="flex items-center gap-3">
-                            <button className="hover:text-red-500">
+                            <button className="hover:text-red-500" onClick={() => reduceQuantity(product)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                                 </svg>
                             </button>
                             <span>{product.quantity}</span>
-                            <button className="hover:text-green-500">
+                            <button className="hover:text-green-500" onClick={() => incrementQuantity(product)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                 </svg>
