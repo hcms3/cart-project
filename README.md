@@ -22,4 +22,4 @@ Ao clicar no carrinho disponível no header, visualizamos o sistema com o produt
 
 Heitor Correia Montagnini Santos
 
-https://www.linkedin.com/in/heitor-montagnini-03438a210/
+https://www.linkedin.com/in/heitor-montagnini-03438a210/# cart-project2.0
