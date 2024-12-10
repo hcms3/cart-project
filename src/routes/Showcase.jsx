@@ -25,7 +25,7 @@ export default function Showcase() {
                 })}
             </div>
             {!loading && (
-                <div className="container grid grid-cols-5 gap-5">
+                <div className="container grid grid-cols-1 sm:grid-cols-5 gap-5">
                     <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
                     <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>
                     <div className="w-full h-96 bg-zinc-300 animate-pulse"></div>

@@ -48,7 +48,7 @@ export default function Header() {
               </button>
 
               {cartItems.length > 0 && (
-                <span className="w-5 h-5 bg-red-500 z-20 absolute top-3/4 left-3/4 rounded-full flex justify-center items-center text-white font-bold text-xs">
+                <span className="w-5 h-5 bg-red-500 z-20 absolute top-3/4 right-3/4 rounded-full flex justify-center items-center text-white font-bold text-xs">
                   {cartItems.length}
                   <span className="w-5 h-5 bg-red-200 absolute inset-0 animate-ping rounded-full z-10"></span>
                 </span>
