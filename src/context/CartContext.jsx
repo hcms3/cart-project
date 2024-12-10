@@ -5,10 +5,6 @@ export const CartContext = createContext();
 export default function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
-  useEffect(() => {
-    console.log(cartItems);
-  }, [cartItems]);
-
   const addToCart = (product) => {
     const haveItems = cartItems.find((item) => item.id === product.id);
     if (haveItems) {
@@ -26,7 +22,6 @@ export default function CartProvider({ children }) {
 
   const removeItem = (product) => {
     const newArray = cartItems.filter((item) => item.id !== product.id);
-    console.log(product.quantity);
     setCartItems(newArray);
   };
 

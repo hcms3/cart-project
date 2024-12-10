@@ -10,7 +10,7 @@ export default function ProductCart({ product }) {
 
     return (
         <div className="w-full flex justify-between bg-zinc-100">
-            <div className="flex w-full">
+            <div className="flex w-full flex-col sm:flex-row items-center sm:items-start">
                 <img src={product.image} alt={product.title} className="w-full max-w-20 min-h-20 object-cover" />
                 <div className="py-1 px-3 flex flex-col gap-1">
                     <h2>{product.title}</h2>
