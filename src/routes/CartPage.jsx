@@ -28,7 +28,7 @@ export default function CartPage() {
           Github
         </a>
         <a
-          href=""
+          href="https://github.com/hcms3/cart-project"
           className="border border-zinc-400 text-zinc-800 py-3 px-5 hover:bg-zinc-700 hover:text-zinc-50 duration-200"
         >
           Repositório Github
