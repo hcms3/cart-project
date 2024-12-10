@@ -1,6 +1,6 @@
 # Cart-project
 
->https://github.com/heitor2002/cart-project/blob/main/LICENSE
+>https://github.com/heitor2002/cart-project2.0/blob/main/LICENSE
 ## Sobre o projeto
 
 O projeto foi desenvolvido com a finalidade de estudar propriedades do ReactJs, se tratando da simulação de um e-commerce. Por ser um projeto visando apenas o estudo da tecnologia, o design não foi motivo de tanta relevância, portanto, será apresentado um simulador de carrinho com um visual simples e funcional.
