@@ -13,7 +13,7 @@ export default function Cart({ position, closeCart }) {
 
   return (
     <div
-      className="fixed top-0 right-0 w-full h-screen max-w-md bg-zinc-700 duration-300 flex flex-col z-10"
+      className="fixed top-0 right-0 w-full h-screen max-w-md bg-zinc-700 duration-300 flex flex-col z-20"
       style={{
         transform: `translateX(${position})`,
       }}
